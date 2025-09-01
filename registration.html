@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitar Website</title>
-    <link rel="stylesheet" href ="/css/main.css">
+    <link rel="stylesheet" href ="css/main.css">
 </head>
 
 <body>
@@ -14,17 +14,17 @@
             <span class="NAME">Rare Sound</span>
             <nav>
                 <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/about.html">О нас</a></li>
-                    <li><a href="/catalog.html">Каталог</a></li>
-                    <li li class="active"><a href="/registration.html">Регистрация</a></li>
-                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li class="active"><a href="registration.html">Регистрация</a></li>
+                    <li class="btn"><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </header>
 
         <div class="container register">
-            <h3>Зарегестрируйтесь</h3>
+            <h3>Зарегистрируйтесь</h3>
             <p>И узнавайте о новых поступлениях гитар первыми</p>
             <div class="block">
                 <div>
@@ -32,16 +32,13 @@
                     <p>С помощью вашего email</p>
                 </div>
                 <div class="email-registration">
-                    <input type="email" id="regEmail" placeholder="Введите ваш email">
+                    <label for="regEmail"></label><input type="email" id="regEmail" placeholder="Введите ваш email">
                     <button type="button" onclick="validateRegistration()">Зарегистрироваться</button>
                 </div>
             </div>
         </div>
     </div>
 
-       </div> 
-    </div>
-    
     <footer>
         <div class="blocks container">
             <div>
@@ -51,9 +48,9 @@
             <div>
                 <h4>О нас</h4>
                 <ul>
-                    <li><a href="/catalog.html">Каталог</a></li>
-                    <li><a href="/registration.html">Регистрация</a></li>
-                    <li><a href="/contacts.html">Контакты</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="registration.html">Регистрация</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div>
@@ -75,9 +72,7 @@
         }
     </script>
 
-    <script src="/js/newsletter.js"></script>
+    <script src="js/newsletter.js"></script>
 
 </body>
-
-
 </html>
