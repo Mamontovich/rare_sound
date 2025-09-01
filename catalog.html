@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог гитар - Rare Sound</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/catalog.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="NAME">Rare Sound</span>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О нас</a></li>
+                    <li class="active"><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                    <li class="cart-icon" onclick="toggleCart()">
+                        <img src="/img/cart.png" alt="Корзина" class="cart-icon-img">
+                        <span class="cart-count" id="cartCount">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="catalog-container container">
+            <h1>Наш каталог гитар</h1>
+            <p>Откройте для себя уникальные и редкие электрогитары из нашей коллекции</p>
+            
+            <!-- Фильтры и поиск -->
+            <div class="filters-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Поиск по названию или бренду...">
+                    <button onclick="searchGuitars()">Найти</button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Сортировка:</label>
+                        <select id="sortSelect" onchange="sortGuitars()">
+                            <option value="name-asc">По названию (А-Я)</option>
+                            <option value="name-desc">По названию (Я-А)</option>
+                            <option value="price-asc">По цене (возрастание)</option>
+                            <option value="price-desc">По цене (убывание)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Бренд:</label>
+                        <select id="brandFilter" onchange="filterByBrand()">
+                            <option value="all">Все бренды</option>
+                            <option value="Fender">Fender</option>
+                            <option value="Gibson">Gibson</option>
+                            <option value="Ibanez">Ibanez</option>
+                            <option value="Yamaha">Yamaha</option>
+                            <option value="Jackson">Jackson</option>
+                            <option value="ESP">ESP</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Цена:</label>
+                        <select id="priceFilter" onchange="filterByPrice()">
+                            <option value="all">Любая цена</option>
+                            <option value="0-50000">До 50,000 руб</option>
+                            <option value="50000-100000">50,000 - 100,000 руб</option>
+                            <option value="100000-200000">100,000 - 200,000 руб</option>
+                            <option value="200000+">От 200,000 руб</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Каталог гитар -->
+            <div class="guitars-catalog" id="guitarsCatalog">
+                <!-- Карточки гитар будут добавляться через JavaScript -->
+            </div>
+
+            <!-- Навигация между страницами -->
+            <div class="pagination" id="pagination">
+                <button onclick="changePage(-1)">← Назад</button>
+                <span id="currentPage">1</span>
+                <button onclick="changePage(1)">Вперед →</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="blocks container">
+            <div>
+                <span class="NAME">Rare Sound</span>
+                <p>Музыкальный магазин редких и винтажных электрогитар</p>
+            </div>
+            <div>
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p>Наш адрес: Ул. Маяковского, д. Твардовского 2</p>
+                <p>+7(777)-777-77-77</p>
+            </div>
+        </div>
+        <hr>
+        <p>2025 Guitar Website 'Rare sound'</p>
+    </footer>
+
+    <!-- Модальное окно корзины -->
+<div class="overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+        <h3>Корзина</h3>
+        <button class="close-cart" onclick="closeCart()">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Товары будут добавляться через JavaScript -->
+    </div>
+    <div class="cart-total">
+        <h4>Итого:</h4>
+        <div class="total-price" id="cartTotal">0 руб</div>
+        <button class="checkout-btn" onclick="checkout()">Оформить заказ</button>
+    </div>
+</div>
+
+
+    <script src="/js/catalog.js"></script>
+</body>
+</html>

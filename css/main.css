@@ -1,0 +1,1105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Стиль 1стр*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat Alternates", sans-serif !important;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    background: #000;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    background: linear-gradient(180deg,rgba(8, 0, 0, 1) 51%, rgba(8, 69, 6, 1) 90%);
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 25px 0;
+}
+
+header .NAME,
+footer .blocks .NAME {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #0B7309;
+    border-radius: 10px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #084506;
+}
+
+header nav ul li.btn a, .register .block button{
+    background: #084506;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover, .register .block button:hover {
+    background: #0B7309;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.hero--info {
+    width: 530px;
+    padding-top: 70px;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn, .hero-about .info .btn {
+    background: #0B7309;
+    color:#fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.hero--info .btn:hover, .hero-about .info .btn:hover  {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+.hero img {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+    border-radius: 15px;
+    transform: scale(1.5);
+
+}
+
+/*Стиль стр с гитарами*/
+.trending {
+    padding-top: 50px;
+}
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.trending .see-all {
+    color: #fff;
+    background: #0B7309;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.trending .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .guitars {
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+}
+
+.trending .guitars span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.big-text {
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+
+.banner {
+    padding: 10px 0;
+    position: relative;
+}
+.banner h3 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.banner h4 {
+    text-align: left;
+    margin: 0;
+    line-height: 170%;
+    margin-bottom: 50px;
+    width: 550px;
+    padding-top: 0px;
+}
+
+.banner img {
+    width: 50%;
+    margin-bottom: 0px;
+    margin-left: 600px;
+    padding-top: -20px;
+    border-radius: 25px;
+    position: absolute;
+    top: 50px;
+    
+}
+
+.trending img {
+    border-radius: 25px;
+}
+
+/*Регистрация*/
+
+.register {
+    padding-bottom: 120px;
+}
+
+.register h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.register .block {
+    background: #1c140f;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.register .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.register .block p {
+    width: 100%;
+    max-width: 400px;
+    color: #ccc
+}
+
+.register .block input {
+    background: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 200px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    padding: 10px 15px;
+    color: #148a10;
+    position: relative;
+}
+
+.register .block input::placeholder {
+    color: #148a10;
+}
+
+.register .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 11px 16px;
+    position: relative;
+    color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .register .block {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .register .block p {
+        max-width: 100%;
+    }
+    
+    .email-subscription {
+        min-width: 100%;
+    }
+}
+
+/*footer*/
+
+footer {
+    background: #000;
+    padding: 50px 0px;
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0;
+}
+
+
+footer .blocks h4 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+    color: #fff;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 0.6px;
+    background: #ccc;
+}
+
+footer > p {
+    text-align: center;
+}
+
+/*Cраница о нас*/
+
+.hero-about {
+    position: relative;
+}
+
+.hero-about .info {
+    width: 500px;
+    padding: 150px 0;
+}
+
+.hero-about .info h1 {
+    margin-top: -100px;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.hero-about .info .btn {
+    margin-top: 20px;
+}
+
+.hero-about img {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    border-radius: 25px;
+}
+
+.hero-about img {
+    margin-top: 100px;
+    width: 45%;
+}
+
+.work {
+    padding: 80px 0;
+}
+
+.work h2 {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.work .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work .blocks .block {
+    width: 25%;
+    border-radius: 10px;
+    padding: 50px 35px;
+    background: #1c140f;
+}
+
+.work .blocks .block h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.work .blocks .block .badge {
+    border-radius: 7px;
+    padding: 10px 7px;
+}
+
+.work .blocks .block .badge {
+    background: #084506;
+}
+
+/*Контакты*/
+
+.hero-contacts h1 {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    font-size: 33px;
+}
+
+.hero-contacts p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hero-contacts img {
+    width: 50%;
+    margin: 80px 15%;
+    border-radius: 25px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.feedback {
+    padding: 70px 0;
+    background: #1c140f;
+}
+
+.feedback h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.feedback p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.feedback form {
+    margin: 80px auto;
+    width: 600px;  
+}
+
+.feedback form .inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback form .inline > div {
+    width: 50%;
+}
+
+.feedback form label {
+    color: #4f4f4f;
+    font-size: 14px;
+}
+
+.feedback form  input,
+.feedback form textarea {
+    background: #2c2420;
+    border-radius: 10px;
+    border: 0.6px solid #CECECE;
+    display: block;
+    width: 90%;
+    padding: 15px 10px;
+    outline: none;
+    color: #fff;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.feedback form .one-line {
+    width: 96%;
+}
+
+.feedback form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.feedback form button {
+    background: #0B7309;
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: #fff;
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+
+.feedback form button:hover {
+    background: #148a10;
+}
+
+/*Каталог жпт----------------------------------------------------------------------------*/
+
+/* Стили для каталога */
+.catalog-container {
+    padding: 50px 0;
+    min-height: 70vh;
+}
+
+.catalog-container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.catalog-container > p {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+/* Фильтры */
+.filters-section {
+    background: #1c140f;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    background: #2c2420;
+    color: #fff;
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 15px 25px;
+    background: #0B7309;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: #148a10;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+.filter-group label {
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.filter-group select {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2c2420;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Каталог гитар */
+.guitars-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.guitar-card {
+    background: #1c140f;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.guitar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(11, 115, 9, 0.3);
+}
+
+.guitar-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.guitar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.guitar-card:hover .guitar-image img {
+    transform: scale(1.05);
+}
+
+.guitar-info {
+    padding: 20px;
+}
+
+.guitar-brand {
+    color: #0B7309;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.guitar-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.guitar-price {
+    color: #0B7309;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.guitar-description {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* Навигация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.pagination button {
+    padding: 12px 25px;
+    background: #0B7309;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #148a10;
+}
+
+.pagination button:disabled {
+    background: #2c2420;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .guitars-catalog {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .search-box button {
+        border-radius: 8px;
+    }
+}
+
+/* Стили для каталога */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: #ccc;
+}
+
+.no-results h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/*Корзина гпт------------------------------*/
+
+/* Стили для корзины */
+.cart-icon {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #0B7309;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: #1c140f;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+}
+
+.cart-modal.open {
+    display: block;
+}
+
+.cart-header {
+    padding: 20px;
+    background: #0B7309;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    margin: 0;
+}
+
+.close-cart {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-items {
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #2c2420;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-info {
+    flex: 1;
+}
+
+.cart-item-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.cart-item-brand {
+    color: #0B7309;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.cart-item-price {
+    color: #0B7309;
+    font-weight: 600;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-btn {
+    background: #2c2420;
+    border: none;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.quantity-input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    margin: 0 10px;
+    background: #2c2420;
+    border: 1px solid #3c3430;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #ff4444;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.cart-total {
+    padding: 20px;
+    background: #2c2420;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.cart-total h4 {
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+
+.total-price {
+    font-size: 24px;
+    color: #0B7309;
+    font-weight: 700;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background: #0B7309;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #148a10;
+}
+
+.empty-cart {
+    text-align: center;
+    padding: 40px 20px;
+    color: #ccc;
+}
+
+.empty-cart p {
+    margin-top: 10px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0B7309;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.add-to-cart-btn:hover {
+    background: #148a10;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.overlay.open {
+    display: block;
+}
+
+/* Адаптивность для корзины */
+@media (max-width: 768px) {
+    .cart-modal {
+        width: 100%;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+    }
+    
+    .cart-item-image {
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* Анимации */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.cart-modal {
+    animation: slideInRight 0.3s ease;
+}
+
+.cart-icon-img {
+    width: 50px;
+    height: 50px;
+    filter: invert(1); /* Делает иконку белой */
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover .cart-icon-img {
+    transform: scale(1.1);
+}
+
+.cart-icon {
+    margin-top: -5px; /* Поднимаем иконку */
+    margin-bottom: -5px; /* Компенсируем снизу */
+}
+
+/* Форма регистрации */
+.email-registration {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.email-registration input {
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.email-registration input:focus {
+    border-color: #0B7309;
+    outline: none;
+}
+
+.email-registration button {
+    background: #0B7309;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.email-registration button:hover {
+    background: #148a10;
+}
+
+/* Простые сообщения */
+.reg-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    z-index: 1001;
+    animation: slideIn 0.3s ease;
+}
+
+.reg-success {
+    background: #0B7309;
+    color: white;
+}
+
+.reg-error {
+    background: #ff4444;
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*cсылки в footer */
+footer .blocks ul li a {
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+footer .blocks ul li a:hover {
+    opacity: 1;
+    color: #0B7309;
+}
+
+
+
+.guitar-card,
+.guitar-card *,
+.filters-section,
+.filters-section * {
+    font-family: "Montserrat Alternates", sans-serif !important;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Website</title>
+    <link rel="stylesheet" href ="/css/main.css">
+</head>
+
+<body>
+    <header class="container">
+            <span class="NAME">Rare Sound</span>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О нас</a></li>
+                    <li><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <div class="container hero-contacts">
+        <h1>Наше местоположение на карте</h1>
+        <p>ул. Маяковского д. Твардовского 2</p>
+        <img src="/img/map.PNG" alt="">
+    </div>
+
+    <div class="feedback">
+        <div class="container">
+            <h2>Зарегистрируйтесь</h2>
+            <p>И оставьте сообщение, если хотите</p>
+    
+            <form id="registrationForm">
+                <div class="inline">
+                    <div>
+                        <label>Имя</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+                    <div>
+                        <label>Фамилия</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+                </div>
+                
+                <label>Email</label>
+                <input type="email" id="email" name="email" class="one-line" required>
+                <span class="error-message" id="emailError"></span>
+    
+                <label>Сообщение</label>
+                <textarea id="message" name="message" class="one-line"></textarea>
+                <span class="error-message" id="messageError"></span>
+    
+                <button type="button" onclick="validateForm()">Продолжить</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="blocks container">
+            <div>
+                <span class="NAME">Rare Sound</span>
+                <p>Музыкальный магазин редких и винтажных электрогитар</p>
+            </div>
+            <div>
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p>Наш адрес: Ул. Маяковского, д. Твардовского 2</p>
+                <p>+7(777)-777-77-77</p>
+            </div>
+        </div>
+        <hr>
+        <p>2025 Guitar Website 'Rare sound'</p>
+    </footer>
+    <script src="/js/validation.js"></script>
+</body>    
+</html>

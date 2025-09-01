@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Website</title>
+    <link rel="stylesheet" href ="/css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="NAME">Rare Sound</span>
+            <nav>
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О нас</a></li>
+                    <li><a href="/catalog.html">Каталог</a></li>
+                    <li li class="active"><a href="/registration.html">Регистрация</a></li>
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container register">
+            <h3>Зарегестрируйтесь</h3>
+            <p>И узнавайте о новых поступлениях гитар первыми</p>
+            <div class="block">
+                <div>
+                    <h4>Регистрация</h4>
+                    <p>С помощью вашего email</p>
+                </div>
+                <div class="email-registration">
+                    <input type="email" id="regEmail" placeholder="Введите ваш email">
+                    <button type="button" onclick="validateRegistration()">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       </div> 
+    </div>
+    
+    <footer>
+        <div class="blocks container">
+            <div>
+                <span class="NAME">Rare Sound</span>
+                <p>Музыкальный магазин редких и винтажных электрогитар</p>
+            </div>
+            <div>
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <p>Наш адрес: Ул. Маяковского, д. Твардовского 2</p>
+                <p>+7(777)-777-77-77</p>
+            </div>
+        </div>
+        <hr>
+        <p>2025 Guitar Website 'Rare sound'</p>
+    </footer>
+
+    <script>
+        function checkEmail() {
+            let email = document.querySelector('#emailField').value
+            if(!email.includes('@')) alert('Некорректные данные');
+            else if(!email.includes('.')) alert('Некорректные данные');
+            else alert('Успешно');
+        }
+    </script>
+
+    <script src="/js/newsletter.js"></script>
+
+</body>
+
+
+</html>
