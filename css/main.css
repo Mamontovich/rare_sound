@@ -504,7 +504,7 @@ footer > p {
     background: #148a10;
 }
 
-/*Каталог жпт----------------------------------------------------------------------------*/
+/*Каталог--------------------------------------*/
 
 /* Стили для каталога */
 .catalog-container {
@@ -735,7 +735,7 @@ footer > p {
     color: #fff;
 }
 
-/*Корзина гпт------------------------------*/
+/*Корзина -----------*/
 
 /* Стили для корзины */
 .cart-icon {
@@ -1102,4 +1102,524 @@ footer .blocks ul li a:hover {
 .filters-section,
 .filters-section * {
     font-family: "Montserrat Alternates", sans-serif !important;
+}
+
+/* ==================== */
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+/* ==================== */
+
+@media (max-width: 768px) {
+    /* Общие стили */
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    /* Header */
+    header {
+        padding: 15px 0;
+        flex-direction: column;
+    }
+    
+    header .NAME {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    header nav {
+        float: none;
+        width: 100%;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    header nav ul li.active::after {
+        margin: 5px auto;
+    }
+    
+    /* Hero section */
+    .hero {
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    
+    .hero--info {
+        width: 100%;
+        padding-top: 30px;
+    }
+    
+    .hero--info h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .hero--info p {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+    
+    .hero img {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: scale(1);
+        width: 100%;
+        max-width: 300px;
+        margin: 30px auto;
+        display: block;
+    }
+    
+    /* Trending guitars */
+    .trending {
+        padding-top: 30px;
+    }
+    
+    .trending h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .trending .see-all {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .trending .guitars {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 0;
+    }
+    
+    .trending .guitars .block {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Big text */
+    .big-text {
+        padding: 30px 0;
+        font-size: 24px;
+        width: 100%;
+    }
+    
+    .big-text p {
+        padding: 0 15px;
+    }
+    
+    /* Banner */
+    .banner {
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .banner h3 {
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .banner h4 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    
+    .banner img {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    
+    /* Register section */
+    .register {
+        padding-bottom: 60px;
+    }
+    
+    .register h3 {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .register .block {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .register .block h4 {
+        font-size: 20px;
+    }
+    
+    .register .block p {
+        max-width: 100%;
+    }
+    
+    .email-registration {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .email-registration input {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .email-registration button {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    /* Footer */
+    footer .blocks {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    footer .blocks > div {
+        width: 100%;
+    }
+    
+    footer .blocks p {
+        width: 100%;
+    }
+    
+    footer .blocks ul {
+        padding: 0;
+    }
+    
+    /* Каталог */
+    .catalog-container {
+        padding: 30px 15px;
+    }
+    
+    .catalog-container h1 {
+        font-size: 28px;
+    }
+    
+    .filters-section {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .search-box button {
+        border-radius: 8px;
+    }
+    
+    .filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .guitars-catalog {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .guitar-image {
+        height: 250px;
+    }
+    
+    .pagination {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Корзина */
+    .cart-modal {
+        width: 100%;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cart-item-image {
+        width: 100%;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* Контакты */
+    .hero-contacts h1 {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    
+    .hero-contacts img {
+        width: 100%;
+        margin: 30px 0;
+    }
+    
+    .feedback form {
+        width: 100%;
+        margin: 40px auto;
+    }
+    
+    .feedback form .inline {
+        flex-direction: column;
+    }
+    
+    .feedback form .inline > div {
+        width: 100%;
+    }
+    
+    .feedback form input,
+    .feedback form textarea {
+        width: 100%;
+    }
+    
+    /* О нас */
+    .hero-about {
+        text-align: center;
+    }
+    
+    .hero-about .info {
+        width: 100%;
+        padding: 50px 0;
+    }
+    
+    .hero-about .info h1 {
+        margin-top: 0;
+        font-size: 24px;
+    }
+    
+    .hero-about img {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .work .blocks {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .work .blocks .block {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}
+
+/* Для очень маленьких устройств */
+@media (max-width: 480px) {
+    .hero--info h1 {
+        font-size: 24px;
+    }
+    
+    .hero--info .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+    
+    .big-text {
+        font-size: 20px;
+    }
+    
+    .guitar-image {
+        height: 200px;
+    }
+    
+    .catalog-container h1 {
+        font-size: 24px;
+    }
+    
+    /* Улучшаем touch targets для мобильных */
+    header nav ul li a,
+    .btn a,
+    button {
+        padding: 12px 20px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    input, textarea, select {
+        font-size: 16px; /* Предотвращает zoom в iOS */
+        min-height: 44px;
+    }
+}
+
+/* Планшеты */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        max-width: 1200px;
+    }
+    
+    .hero--info {
+        width: 60%;
+    }
+    
+    .hero img {
+        transform: scale(1.2);
+        right: 50px;
+    }
+    
+    .guitars-catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .trending .guitars {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .trending .guitars .block {
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+/* Улучшения для landscape режима */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding-bottom: 30px;
+    }
+    
+    .hero--info {
+        padding-top: 20px;
+    }
+    
+    .hero img {
+        max-width: 200px;
+    }
+}
+
+/* Высокопиксельные дисплеи */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero--info .btn,
+    .trending .see-all,
+    .email-registration button {
+        border: 2px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* Анимации для мобильных */
+@media (max-width: 768px) {
+    .guitar-card {
+        transform: none;
+    }
+    
+    .guitar-card:hover {
+        transform: translateY(-3px);
+    }
+    
+    /* Улучшаем производительность */
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Оптимизация для медленных устройств */
+    .hero img {
+        loading: lazy;
+    }
+    
+    .guitar-image img {
+        loading: lazy;
+    }
+}
+
+/* Темная тема для мобильных */
+@media (prefers-color-scheme: dark) {
+    .email-registration input {
+        background: #2c2420;
+        color: #fff;
+        border-color: #0B7309;
+    }
+}
+
+/* Безопасные зоны для iPhone X и новее */
+@supports(padding: max(0px)) {
+    .container {
+        padding-left: max(15px, env(safe-area-inset-left));
+        padding-right: max(15px, env(safe-area-inset-right));
+    }
+    
+    footer {
+        padding-bottom: max(50px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Улучшения для touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .guitar-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover, 
+    .see-all:hover,
+    .email-registration button:hover {
+        transform: scale(1.02);
+    }
+    
+    /* Увеличиваем hit area */
+    header nav ul li a {
+        padding: 15px 20px;
+    }
+}
+
+/* Предотвращение zoom при фокусе на iOS */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px;
+    }
+}
+
+/* Плавные анимации для мобильных */
+@media (prefers-reduced-motion: no-preference) {
+    .guitar-card,
+    .btn,
+    .see-all {
+        transition: all 0.3s ease;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }

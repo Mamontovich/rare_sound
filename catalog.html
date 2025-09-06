@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог гитар - Rare Sound</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/catalog.css">
 </head>
 
 <body>
@@ -14,13 +15,13 @@
             <span class="NAME">Rare Sound</span>
             <nav>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="about.html">О нас</a></li>
-                    <li class="active"><a href="catalog.html">Каталог</a></li>
-                    <li><a href="registration.html">Регистрация</a></li>
-                    <li class="btn"><a href="contacts.html">Контакты</a></li>
+                    <li><a href="/">Главная</a></li>
+                    <li><a href="/about.html">О нас</a></li>
+                    <li class="active"><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li class="btn"><a href="/contacts.html">Контакты</a></li>
                     <li class="cart-icon" onclick="toggleCart()">
-                        <img src="img/cart.png" alt="Корзина" class="cart-icon-img">
+                        <img src="/img/cart.png" alt="Корзина" class="cart-icon-img">
                         <span class="cart-count" id="cartCount">0</span>
                     </li>
                 </ul>
@@ -34,14 +35,14 @@
             <!-- Фильтры и поиск -->
             <div class="filters-section">
                 <div class="search-box">
-                    <label for="searchInput"></label><input type="text" id="searchInput" placeholder="Поиск по названию или бренду...">
+                    <input type="text" id="searchInput" placeholder="Поиск по названию или бренду...">
                     <button onclick="searchGuitars()">Найти</button>
                 </div>
                 
                 <div class="filters">
                     <div class="filter-group">
                         <label>Сортировка:</label>
-                        <label for="sortSelect"></label><select id="sortSelect" onchange="sortGuitars()">
+                        <select id="sortSelect" onchange="sortGuitars()">
                             <option value="name-asc">По названию (А-Я)</option>
                             <option value="name-desc">По названию (Я-А)</option>
                             <option value="price-asc">По цене (возрастание)</option>
@@ -51,7 +52,7 @@
                     
                     <div class="filter-group">
                         <label>Бренд:</label>
-                        <label for="brandFilter"></label><select id="brandFilter" onchange="filterByBrand()">
+                        <select id="brandFilter" onchange="filterByBrand()">
                             <option value="all">Все бренды</option>
                             <option value="Fender">Fender</option>
                             <option value="Gibson">Gibson</option>
@@ -64,7 +65,7 @@
                     
                     <div class="filter-group">
                         <label>Цена:</label>
-                        <label for="priceFilter"></label><select id="priceFilter" onchange="filterByPrice()">
+                        <select id="priceFilter" onchange="filterByPrice()">
                             <option value="all">Любая цена</option>
                             <option value="0-50000">До 50,000 руб</option>
                             <option value="50000-100000">50,000 - 100,000 руб</option>
@@ -98,9 +99,9 @@
             <div>
                 <h4>О нас</h4>
                 <ul>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="registration.html">Регистрация</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="/catalog.html">Каталог</a></li>
+                    <li><a href="/registration.html">Регистрация</a></li>
+                    <li><a href="/contacts.html">Контакты</a></li>
                 </ul>
             </div>
             <div>
@@ -131,6 +132,6 @@
 </div>
 
 
-    <script src="js/catalog.js"></script>
+    <script src="/js/catalog.js"></script>
 </body>
 </html>
