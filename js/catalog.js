@@ -6,7 +6,13 @@ const guitarsData = [
         name: "Stratocaster '62 Reissue",
         price: 185000,
         image: "/img/guitars/fender_stratocaster.jpg",
-        description: "Винтажная модель 1962 года"
+        description: "Винтажная модель 1962 года",
+        shape: "Double-cutaway",
+        bodyMaterial: "Ольха",
+        neckMaterial: "Клён",
+        fretboardMaterial: "Палисандр",
+        pickups: "3 Single-coil",
+        strings: "6"
     },
     {
         id: 2,
@@ -14,7 +20,13 @@ const guitarsData = [
         name: "Les Paul Standard '59",
         price: 320000,
         image: "/img/guitars/gibson_lespaul.jpg",
-        description: "Классика рок-музыки"
+        description: "Классика рок-музыки",
+        shape: "Single-cutaway",
+        bodyMaterial: "Красное дерево",
+        neckMaterial: "Красное дерево",
+        fretboardMaterial: "Палисандр",
+        pickups: "2 Humbucker",
+        strings: "6"
     },
     {
         id: 3,
@@ -22,7 +34,13 @@ const guitarsData = [
         name: "Iceman IC-420",
         price: 95000,
         image: "/img/guitars/ibanez_rg550.jpg",
-        description: "Икона метал-сцены с удобным грифом"
+        description: "Икона метал-сцены с удобным грифом",
+        shape: "Iceman",
+        bodyMaterial: "Липа",
+        neckMaterial: "Клён",
+        fretboardMaterial: "Клён",
+        pickups: "2 Humbucker, 1 Single-coil",
+        strings: "6"
     },
     {
         id: 4,
@@ -30,7 +48,13 @@ const guitarsData = [
         name: "SG-200",
         price: 90000,
         image: "/img/guitars/yamaha_pacifica.jpg",
-        description: "Легендарная гитара русского рока"
+        description: "Легендарная гитара русского рока",
+        shape: "SG-style",
+        bodyMaterial: "Ясень",
+        neckMaterial: "Клён",
+        fretboardMaterial: "Палисандр",
+        pickups: "2 Single-coil, 1 Humbucker",
+        strings: "6"
     },
     {
         id: 5,
@@ -38,7 +62,13 @@ const guitarsData = [
         name: "Soloist SL2",
         price: 145000,
         image: "/img/guitars/jackson_soloist.jpg",
-        description: "Агрессивный дизайн для тяжелой музыки"
+        description: "Агрессивный дизайн для тяжелой музыки",
+        shape: "Superstrat",
+        bodyMaterial: "Ольха",
+        neckMaterial: "Клён",
+        fretboardMaterial: "Чёрное дерево",
+        pickups: "2 Humbucker",
+        strings: "6"
     },
     {
         id: 6,
@@ -46,7 +76,13 @@ const guitarsData = [
         name: "E-II Horizon",
         price: 175000,
         image: "/img/guitars/esp_horizon.jpg",
-        description: "Премиальное качество для сцены и студии"
+        description: "Премиальное качество для сцены и студии",
+        shape: "Explorer-style",
+        bodyMaterial: "Махагони",
+        neckMaterial: "Клён",
+        fretboardMaterial: "Чёрное дерево",
+        pickups: "2 EMG Humbucker",
+        strings: "6"
     },
     {
         id: 7,
@@ -54,7 +90,13 @@ const guitarsData = [
         name: "Telecaster Custom",
         price: 155000,
         image: "/img/guitars/fender_telecaster.jpg",
-        description: "Вечная классика с уникальным тембром"
+        description: "Вечная классика с уникальным тембром",
+        shape: "Single-cutaway",
+        bodyMaterial: "Ясень",
+        neckMaterial: "Клён",
+        fretboardMaterial: "Клён",
+        pickups: "2 Single-coil",
+        strings: "6"
     },
     {
         id: 8,
@@ -62,7 +104,13 @@ const guitarsData = [
         name: "SG Standard",
         price: 195000,
         image: "/img/guitars/gibson_sg.jpg",
-        description: "Легендарный дизайн и мощное звучание"
+        description: "Легендарный дизайн и мощное звучание",
+        shape: "Double-cutaway",
+        bodyMaterial: "Красное дерево",
+        neckMaterial: "Красное дерево",
+        fretboardMaterial: "Палисандр",
+        pickups: "2 Humbucker",
+        strings: "6"
     }
 ];
 
@@ -77,6 +125,7 @@ function initCatalog() {
 }
 
 // Рендер гитар
+// Обновляем функцию renderGuitars для отображения дополнительной информации
 function renderGuitars() {
     const catalog = document.getElementById('guitarsCatalog');
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -108,6 +157,35 @@ function renderGuitars() {
             <h3 class="guitar-name">${guitar.name}</h3>
             <div class="guitar-price">${formatPrice(guitar.price)} руб</div>
             <p class="guitar-description">${guitar.description}</p>
+            
+            <!-- Дополнительная информация -->
+            <div class="guitar-specs">
+                <div class="spec-item">
+                    <span class="spec-label">Форма:</span>
+                    <span class="spec-value">${guitar.shape}</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Материал корпуса:</span>
+                    <span class="spec-value">${guitar.bodyMaterial}</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Материал грифа:</span>
+                    <span class="spec-value">${guitar.neckMaterial}</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Накладка:</span>
+                    <span class="spec-value">${guitar.fretboardMaterial}</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Звукосниматели:</span>
+                    <span class="spec-value">${guitar.pickups}</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Струны:</span>
+                    <span class="spec-value">${guitar.strings}</span>
+                </div>
+            </div>
+            
             <button class="add-to-cart-btn" onclick="addToCart(${guitar.id})">
                 Добавить в корзину
             </button>
@@ -315,23 +393,28 @@ function renderCartItems() {
         const cartItem = document.createElement('div');
         cartItem.className = 'cart-item';
         cartItem.innerHTML = `
-            <div class="cart-item-image">
-                <img src="${item.image}" alt="${item.brand} ${item.name}"
-                     onerror="this.src='/img/guitars/placeholder.jpg'">
-            </div>
-            <div class="cart-item-info">
-                <div class="cart-item-brand">${item.brand}</div>
-                <div class="cart-item-name">${item.name}</div>
-                <div class="cart-item-price">${formatPrice(item.price)} руб</div>
-                <div class="cart-item-quantity">
-                    <button class="quantity-btn" onclick="changeQuantity(${index}, -1)">-</button>
-                    <input type="number" class="quantity-input" value="${item.quantity}" 
-                           min="1" onchange="changeQuantityInput(${index}, this.value)">
-                    <button class="quantity-btn" onclick="changeQuantity(${index}, 1)">+</button>
-                    <button class="remove-item" onclick="removeFromCart(${index})">×</button>
-                </div>
-            </div>
-        `;
+        <div class="cart-item-image">
+        <img src="${item.image}" alt="${item.brand} ${item.name}"
+             onerror="this.src='/img/guitars/placeholder.jpg'">
+    </div>
+    <div class="cart-item-info">
+        <div class="cart-item-brand">${item.brand}</div>
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-specs">
+            <span>${item.shape}, ${item.bodyMaterial}</span><br>
+            <span>${item.pickups}</span>
+        </div>
+        <div class="cart-item-price">${formatPrice(item.price)} руб</div>
+        <div class="cart-item-quantity">
+            <button class="quantity-btn" onclick="changeQuantity(${index}, -1)">-</button>
+            <input type="number" class="quantity-input" value="${item.quantity}" 
+                   min="1" onchange="changeQuantityInput(${index}, this.value)">
+            <button class="quantity-btn" onclick="changeQuantity(${index}, 1)">+</button>
+            <button class="remove-item" onclick="removeFromCart(${index})">×</button>
+        </div>
+    </div>
+`;
+
         cartItems.appendChild(cartItem);
     });
     

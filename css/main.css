@@ -1623,3 +1623,71 @@ footer .blocks ul li a:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+/* Стили для спецификаций гитар */
+.guitar-specs {
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 3px solid #0B7309;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.spec-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: #ccc;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.spec-value {
+    color: #fff;
+    font-size: 13px;
+    text-align: right;
+}
+
+/* Адаптивность для спецификаций */
+@media (max-width: 768px) {
+    .guitar-specs {
+        padding: 10px;
+    }
+    
+    .spec-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .spec-label,
+    .spec-value {
+        text-align: left;
+        font-size: 11px;
+    }
+}
+
+/* Анимация появления спецификаций */
+.guitar-card:hover .guitar-specs {
+    background: rgba(11, 115, 9, 0.1);
+    transition: background 0.3s ease;
+}
+
+.cart-item-specs {
+    font-size: 12px;
+    color: #ccc;
+    margin: 5px 0;
+    line-height: 1.3;
+}
